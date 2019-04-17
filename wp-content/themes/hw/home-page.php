@@ -27,7 +27,7 @@ Template Post Type: page
                             $link_title = $link['title'];
                             $link_target = $link['target'] ? $link['target'] : '_self';
                             ?>
-                            <a class="" href="<?php echo esc_url($link_url); ?>"
+                            <a class="blue-buton" href="<?php echo esc_url($link_url); ?>"
                                target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
                         <?php endif; ?>
                     </div>
@@ -37,18 +37,18 @@ Template Post Type: page
                 <div class="section2">
                     <div class="page-container">
                         <p class=""><?php the_sub_field('text_area'); ?></p>
-                        <div>
-                            <?php
-                            $link = get_sub_field('link');
-                            if ($link):
-                                $link_url = $link['url'];
-                                $link_title = $link['title'];
-                                $link_target = $link['target'] ? $link['target'] : '_self';
-                                ?>
-                                <a class="" href="<?php echo esc_url($link_url); ?>"
-                                   target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
-                            <?php endif; ?>
-                        </div>
+                        
+                        <?php
+                        $link = get_sub_field('link');
+                        if ($link):
+                            $link_url = $link['url'];
+                            $link_title = $link['title'];
+                            $link_target = $link['target'] ? $link['target'] : '_self';
+                            ?>
+                            <a class="blue-buton" href="<?php echo esc_url($link_url); ?>"
+                               target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                        <?php endif; ?>
+                        
                     </div>
                 </div>
             <?php // layout_3

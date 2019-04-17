@@ -1,6 +1,7 @@
 *.log
 
 .idea
+.git/
 nbproject/
 .xml
 .DS_Store
