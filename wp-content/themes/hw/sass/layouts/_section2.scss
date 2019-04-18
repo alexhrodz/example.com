@@ -1,7 +1,8 @@
 .section2 {
     background-color: #294b09;
-    padding: 45px 0 60px;
+    padding: 10px 0 ;
     p {
+    	font-family: Barlow;
 		font-size: 28px;
 		font-weight: 500;
 		line-height: 45px;
@@ -9,4 +10,14 @@
 		display: inline-block;
 		max-width: 80%;
     }
+}
+
+.iii {
+		display: flex;
+
+justify-content: space-between;
+
+flex-wrap: wrap;
+
+align-items: center;
 }

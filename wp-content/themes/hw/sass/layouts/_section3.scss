@@ -2,5 +2,46 @@
 
 .section3 {
 	background-color: #488122;
-	padding: 45px 0 60px;
+	padding: 10px 0 ;
+
+	h3 {
+		font-family: "Open Sans";
+
+font-size: 38px;
+
+font-weight: 300;
+
+line-height: 42px;
+
+/* Text style for "L, ifeLens" */
+
+letter-spacing: -0.76px;
+	}
+	p {
+		font-family: Barlow;
+
+font-size: 19px;
+
+font-weight: 500;
+
+line-height: 40px;
+
+/* Text style for "The LifeLe" */
+
+letter-spacing: -0.19px;
+	}
+	&__wrapp {
+				max-width: 50%;
+				display: inline-block;
+	}
+}
+
+.jjj {
+	display: flex;
+
+justify-content: space-between;
+
+flex-wrap: wrap;
+
+align-items: center;
 }
