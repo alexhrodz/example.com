@@ -1,0 +1,30 @@
+.aup-section2 {
+	background-color: #51b4bd;
+	padding: 35px 0;
+	&__wrapper {
+		max-width: 1000px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	&__description {
+		display: inline-block;
+		max-width: 70%;
+	}
+
+	h3 {
+		font: 400 25px/30px Open Sans, sans-serif;
+		letter-spacing: 1px;
+		color: #155156;
+
+	}
+
+	p {
+		font-weight: 500;
+		line-height: 40px;
+		margin-top: 30px;
+	}
+}

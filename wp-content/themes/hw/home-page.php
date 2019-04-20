@@ -15,9 +15,9 @@ Template Post Type: page
             $layout = get_row_layout();
             // layout_1
             if ($layout === 'section1'): ?>
-                <div class="section1"
+                <div class="hp-section1"
                      style="background: url(<?php the_sub_field('image'); ?>) no-repeat center;  background-size: cover;">
-                    <div class="page-container zzz">
+                    <div class="hp-">
                         <h3 class=""><?php the_sub_field('title'); ?></h3>
                         <p class=""><?php the_sub_field('text'); ?></p>
                         <?php
@@ -34,8 +34,8 @@ Template Post Type: page
                 </div>
             <?php // layout_2
             elseif ($layout === 'section2'): ?>
-                <div class="section2">
-                    <div class="page-container iii">
+                <div class="hp-section2">
+                    <div class="hp-">
                         <p class=""><?php the_sub_field('text_area'); ?></p>
                         
                         <?php
@@ -53,9 +53,9 @@ Template Post Type: page
                 </div>
             <?php // layout_3
             elseif ($layout === 'section3'): ?>
-                <div class="section3">
-                    <div class="page-container jjj">
-                        <div class="section3__wrapp">
+                <div class="hp-section3">
+                    <div class="hp_">
+                        <div class="hp-section3__wrapp">
                             <h3 class=""><?php the_sub_field('title'); ?></h3>
                             <p class=""><?php the_sub_field('text_area'); ?></p>
                         </div>
@@ -64,7 +64,7 @@ Template Post Type: page
                             $image = get_sub_field('image');
                             if( !empty($image) ): ?>
 
-                                <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                <img class="" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                             <?php endif; ?>
                       
@@ -72,7 +72,7 @@ Template Post Type: page
                 </div>
             <?php // layout_4
             elseif ($layout === 'repeater'): ?>
-                <div class="section4">
+                <div class="hp-section4">
                 <h3><?php the_sub_field('title_section'); ?></h3>
                 <?php if( have_rows('gallery') ): ?>
 
@@ -106,7 +106,7 @@ Template Post Type: page
                 </div>
                 <?php // layout_5
                 elseif ($layout === 'carousel'): ?>
-                    <div class="section5">
+                    <div class="hp-section5">
                     <h3><?php the_sub_field('title_section'); ?></h3>
                     <?php if( have_rows('slider') ): ?>
 
@@ -139,8 +139,8 @@ Template Post Type: page
                     </div>
                 <?php // layout_6
                 elseif ($layout === 'section6'): ?>
-                    <div class="section6">
-                        <div class="section6__description">
+                    <div class="hp-section6">
+                        <div class="hp-section6__description">
                             <h3><?php the_sub_field('title_section'); ?></h3>
                             <p class=""><?php the_sub_field('text_section'); ?></p>
                         </div>
@@ -206,9 +206,9 @@ Template Post Type: page
                     </div>
                 <?php // layout_7
                 elseif ($layout === 'section7'): ?>
-                    <div class="section7">
-                        <div class="section7__wrapper">
-                            <div class="section7__image">
+                    <div class="hp-section7">
+                        <div class="hp-section7__wrapper">
+                            <div class="hp-section7__image">
                                 <?php
                                 $image = get_sub_field('image');
                                 if( !empty($image) ): ?>
@@ -216,11 +216,11 @@ Template Post Type: page
                                     <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                                 <?php endif; ?>
                             </div>
-                            <div class="section7__description">
+                            <div class="hp-section7__description">
                                 <h3 class=""><?php the_sub_field('title'); ?></h3>
                                 <p class=""><?php the_sub_field('text'); ?></p>                                  
                             </div>
-                             <div class="section7__url">
+                             <div class="hp-section7__url">
                                 <?php
                                 $link_1 = get_sub_field('link_1');
                                 if ($link_1):
@@ -247,34 +247,34 @@ Template Post Type: page
 
                 <?php // layout_8
                 elseif ($layout === 'section8'): ?>
-                    <div class="section8">
-                        <div class="section8__wrapper">
-                            <div class="section8__description">
+                    <div class="hp-section8">
+                        <div class="hp-section8__wrapper">
+                            <div class="hp-section8__description">
                                 <h3 class=""><?php the_sub_field('title'); ?></h3>
                                 <p class=""><?php the_sub_field('text_area'); ?></p>
                             </div>
-                            <div class="section8__image">
+                            <div class="hp-section8__image">
                                 <?php
                                 $image = get_sub_field('image');
                                 if( !empty($image) ): ?>
 
-                                    <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                    <img class="" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                                 <?php endif; ?>
                             </div>
                         </div>
                     </div>
                 <?php // layout_9
                 elseif ($layout === 'section9'): ?>
-                    <div class="section9">
-                        <div class="section9__wrapper">
-                            <div class="section9__image">
+                    <div class="hp-section9">
+                        <div class="hp-section9__wrapper">
+                            <div class="hp-section9__image">
                                 <?php
                                 $image = get_sub_field('image');
                                 if( !empty($image) ): ?>
                                     <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                                 <?php endif; ?>
                             </div>
-                            <div class="section9__description">
+                            <div class="hp-section9__description">
                                 <h3><?php the_sub_field('title'); ?></h3>
                                 <p><?php the_sub_field('text'); ?></p>
                             </div>

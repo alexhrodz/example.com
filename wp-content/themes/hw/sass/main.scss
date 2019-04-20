@@ -3,20 +3,27 @@
 
 
 //@import "base";
+@import "base/_reset.scss";
 @import "base/_body.scss";
 
 
 
 //@import "layouts";
-@import "layouts/_section1.scss";
-@import "layouts/_section2.scss";
-@import "layouts/_section3.scss";
-@import "layouts/_section4.scss";
-@import "layouts/_section5.scss";
-@import "layouts/_section6.scss";
-@import "layouts/_section7.scss";
-@import "layouts/_section8.scss";
-@import "layouts/_section9.scss";
+@import "layouts/home-page/section1";
+@import "layouts/home-page/section2";
+@import "layouts/home-page/section3";
+@import "layouts/home-page/section4";
+@import "layouts/home-page/section5";
+@import "layouts/home-page/section6";
+@import "layouts/home-page/section7";
+@import "layouts/home-page/section8";
+@import "layouts/home-page/section9";
+
+@import "layouts/abaut-us-page/section1";
+@import "layouts/abaut-us-page/section2";
+@import "layouts/abaut-us-page/section3";
+@import "layouts/abaut-us-page/section4";
+
 
 
 //@import "components";
