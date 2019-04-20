@@ -72,7 +72,8 @@ Template Post Type: page
                 </div>
             <?php // layout_4
             elseif ($layout === 'repeater'): ?>
-                <h3 class=""><?php the_sub_field('title_section'); ?></h3>
+                <div class="section4">
+                <h3><?php the_sub_field('title_section'); ?></h3>
                 <?php if( have_rows('gallery') ): ?>
 
                     <ul class="">
@@ -89,9 +90,11 @@ Template Post Type: page
                         <li class="">
 
                             <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                            <div class="fon-blue">
+                                <h4 class=""><?php echo $title; ?></h4>
+                                <p class=""><?php echo $content; ?></p>
+                            </div>
 
-                            <h4 class=""><?php echo $title; ?></h4>
-                            <p class=""><?php echo $content; ?></p>
 
                          </li>
 
@@ -100,6 +103,107 @@ Template Post Type: page
                     </ul>
 
                 <?php endif; ?>
+                </div>
+                <?php // layout_5
+                elseif ($layout === 'carousel'): ?>
+                    <div class="section5">
+                    <h3><?php the_sub_field('title_section'); ?></h3>
+                    <?php if( have_rows('slider') ): ?>
+
+                    <ul class="">
+
+                    <?php while( have_rows('slider') ): the_row(); 
+
+                        // vars
+                        $image = get_sub_field('image');
+                        $text = get_sub_field('text');
+                        $title = get_sub_field('title');
+
+                    ?>
+
+                        <li class="">
+
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                            <div class="">
+                                <h4 class=""><?php echo $title; ?></h4>
+                                <p class=""><?php echo $text; ?></p>
+                            </div>
+
+
+                         </li>
+
+                    <?php endwhile; ?>
+
+                    </ul>
+                    <?php endif; ?>
+                    </div>
+                <?php // layout_6
+                elseif ($layout === 'section6'): ?>
+                    <div class="section6">
+                        <div class="section6__description">
+                            <h3><?php the_sub_field('title_section'); ?></h3>
+                            <p class=""><?php the_sub_field('text_section'); ?></p>
+                        </div>
+
+                        <div class="nav-left">
+                            <ul>
+                                <li class="blue-buton"><h4><?php the_sub_field('title_1'); ?></h4></li>
+                                <li class="blue-buton"><h4><?php the_sub_field('title_2'); ?></h4></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab">
+                            <div class="tab-image-wrapp">wrapp
+                                <div class="tab-images">
+                                    <?php
+                                    $image_1 = get_sub_field('image_1');
+                                    $image_2 = get_sub_field('image_2');
+                                    $image_3 = get_sub_field('image_3');
+                                    $image_4 = get_sub_field('image_4');
+                                    if( !empty($image_1) ): ?>
+                                        <img class="tab-image" src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>" />
+                                    <?php endif; 
+                                    if( !empty($image_2) ): ?>
+                                        <img class="tab-image"" src="<?php echo $image_2['url']; ?>" alt="<?php echo $image_2['alt']; ?>" />
+                                    <?php endif; 
+                                    if( !empty($image_3) ): ?>
+                                        <img class="tab-image"" src="<?php echo $image_3['url']; ?>" alt="<?php echo $image_3['alt']; ?>" />
+                                    <?php endif; 
+                                    if( !empty($image_4) ): ?>
+                                        <img class="tab-image"" src="<?php echo $image_4['url']; ?>" alt="<?php echo $image_4['alt']; ?>" />
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div>
+                                <h4><?php the_sub_field('title_1'); ?></h4>
+                                <h4><?php the_sub_field('title_2'); ?></h4>
+                                <h4><?php the_sub_field('title_3'); ?></h4>
+                                <h4><?php the_sub_field('title_4'); ?></h4>
+                                <p class=""><?php the_sub_field('text_1'); ?></p>
+                                <p class=""><?php the_sub_field('text_2'); ?></p>
+                                <p class=""><?php the_sub_field('text_3'); ?></p>
+                                <p class=""><?php the_sub_field('text_4'); ?></p>
+                            </div>
+                        </div>
+
+                        <div class="nav-rigth">
+                            <ul>
+                                <li class="blue-buton"><h4><?php the_sub_field('title_3'); ?></h4></li>
+                                <li class="blue-buton"><h4><?php the_sub_field('title_4'); ?></h4></li>
+                            </ul>
+                        </div>
+                        <?php
+                            $link = get_sub_field('link');
+                            if ($link):
+                                $link_url = $link['url'];
+                                $link_title = $link['title'];
+                                $link_target = $link['target'] ? $link['target'] : '_self';
+                                ?>
+                                <a class="blue-buton" href="<?php echo esc_url($link_url); ?>"
+                                   target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                        <?php endif; ?>
+
+                    </div>
                 <?php // layout_7
                 elseif ($layout === 'section7'): ?>
                     <div class="section7">
