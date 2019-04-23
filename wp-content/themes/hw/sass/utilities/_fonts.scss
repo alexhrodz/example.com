@@ -1,16 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-p, h3, h4 {
-	color: #fff;
-}
-
-p, .p {
+.p {
 	font: 400 19px/34px Barlow, sans-serif;
 	letter-spacing: -0.38px;
+	color: #333;
 }
-h3, .h3 {
-	font: 300 38px/42px Open Sans, sans-serif;
+.h3 {
+	font: 300 36px/42px Open Sans, sans-serif;
 	letter-spacing: -0.76px;
 	text-transform: uppercase;
 }

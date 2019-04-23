@@ -1,9 +1,31 @@
 .blue-buton {
 	background-color: #00a4e4;
-	padding: 10px 16px;
+	padding: 8px 16px;
 	color: #fff;
 	text-transform: uppercase;
 	text-decoration: none;
 	font: 700 15px/35px Barlow, sans-serif;
 	letter-spacing: 0.6px;
 }
+
+.white-buton {
+	color: #333;
+	text-transform: uppercase;
+	text-decoration: none;
+	font: 900 18px/20px Barlow, sans-serif;
+	letter-spacing: 0.6px;
+	border: 1px solid #ccc;
+	display: flex;
+	align-items: center;
+	width: 185px;
+	height: 66px;
+	justify-content: center;
+	margin-bottom: 50px;
+	
+}
+
+.active-nav {
+		border: 1px solid #00a4e4;
+		background-color: #00a4e4;
+		color: #fff;
+	}

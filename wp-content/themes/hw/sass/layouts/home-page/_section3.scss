@@ -1,47 +1,24 @@
 
-
-.section3 {
+.hp-section3 {
 	background-color: #488122;
-	padding: 10px 0 ;
-
+	padding: 40px 0 ;
+	color: #fff;
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+		max-width: 1100px;
+		margin: 0 auto;
+	
+	}
 	h3 {
-		font-family: "Open Sans";
-
-font-size: 38px;
-
-font-weight: 300;
-
-line-height: 42px;
-
-/* Text style for "L, ifeLens" */
-
-letter-spacing: -0.76px;
+		margin-bottom: 30px;
 	}
-	p {
-		font-family: Barlow;
 
-font-size: 19px;
-
-font-weight: 500;
-
-line-height: 40px;
-
-/* Text style for "The LifeLe" */
-
-letter-spacing: -0.19px;
+	&__description, &__image  {
+		max-width: 50%;
+		display: inline-block;
 	}
-	&__wrapp {
-				max-width: 50%;
-				display: inline-block;
-	}
-}
 
-.jjj {
-	display: flex;
-
-justify-content: space-between;
-
-flex-wrap: wrap;
-
-align-items: center;
 }

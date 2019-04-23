@@ -1,0 +1,69 @@
+.hp-section6 {
+		max-width: 1050px;
+		margin: 0 auto;
+		text-align: center;
+		padding: 40px 0;
+	&__description {
+		p {
+			display: block;
+			margin: 0 auto;
+			max-width: 800px;
+			padding: 15px;
+		}
+	}
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		.nav-left, .nav-rigth {
+			max-width: 18%;
+			margin-top: 70px;
+		}
+		.tab {
+			max-width: 63%;
+			margin-bottom: 30px;
+			&-descript-wrapp {
+				width: 592px;
+				height: 199px;
+				margin: 0 auto;
+				background-color: #f2f2f2;
+				border: 1px solid #e2e2e2;
+				h4 {
+					background-color: #e2e2e2;
+					display: none;
+					padding: 15px 0;
+				}
+				p {
+					line-height: 22px;
+					display: none;
+					padding: 15px 20px;
+
+				}
+				.active {
+						display: block;
+					}
+			}
+			&-image-wrapp {
+				width: 672px;
+				height: 388px;
+				overflow: hidden;
+				background: url("../img/computer_image.png") no-repeat center;
+				.tab-images {
+					position: relative;
+					max-width: 510px;
+					max-height: 320px;
+
+					.tab-image {
+						position: absolute;
+						top: 25px;
+						left: 81px;
+						width: 100%;
+						z-index: -1;
+					}
+				}
+				margin-bottom: 30px;
+			}
+			
+		}
+
+	}
+}

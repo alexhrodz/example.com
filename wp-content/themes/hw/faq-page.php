@@ -15,15 +15,15 @@ Template Post Type: page
             $layout = get_row_layout();
             // layout_1
             if ($layout === 'section1'): ?>
-            	<div>
-            		<h3><?php the_sub_field('title_page'); ?></h3>
+            	<div class="faq-title-page">
+            		<h3 class="h3"><?php the_sub_field('title_page'); ?></h3>
             	</div>
 
 
-            	<div>
+            	
             		<?php if( have_rows('content') ): ?>
 
-                    <ul class="">
+                    <ul class="faq-wrapper">
 
                     <?php while( have_rows('content') ): the_row(); 
 
@@ -34,13 +34,13 @@ Template Post Type: page
 
                         ?>
 
-                        <li class="">
+                        <li class="faq-active">
 
                             
                             <div class="question-wrapper">
                                 <h4 class=""><?php echo $title; ?></h4>
                             </div>
-                            <div class="answer-wrapper">
+                            <div class="answer-wrapper p">
                                 <?php echo $text; ?>
                             </div>
 
@@ -52,7 +52,7 @@ Template Post Type: page
                     </ul>
 
                 <?php endif; ?>
-            	</div>
+            	
 
             <?php endif;
         endwhile;

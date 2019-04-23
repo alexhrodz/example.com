@@ -1,23 +1,20 @@
-.section2 {
+.hp-section2 {
     background-color: #294b09;
-    padding: 10px 0 ;
+    padding: 40px 0 ;
+    color: #fff;
+    &__wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
     p {
-    	font-family: Barlow;
-		font-size: 28px;
-		font-weight: 500;
-		line-height: 45px;
+    	font: 500 28px/45px Barlow, sans-serif;
 		letter-spacing: -0.28px;
 		display: inline-block;
 		max-width: 80%;
     }
 }
 
-.iii {
-		display: flex;
-
-justify-content: space-between;
-
-flex-wrap: wrap;
-
-align-items: center;
-}

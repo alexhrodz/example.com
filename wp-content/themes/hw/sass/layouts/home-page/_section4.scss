@@ -1,7 +1,46 @@
-.section4 {
-
-}
-
-.fon-blue {
-	display: none;
+.hp-section4 {
+	max-width: 1320px;
+	margin: 0 auto;
+	h3 {
+		text-align: center;
+		font-weight: 100;
+		margin: 20px 0;
+	}
+	.flex {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	li {
+		max-height: 320px;
+		max-width: 320px;
+	}
+	&__image {
+		position: relative;
+		.fon-blue {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: linear-gradient(rgba(0, 161, 225, 0.77), rgba(0, 161, 225, 0.77));
+			width: 100%;
+			height: 100%;
+			color: #fff;
+			font: 500 19px/35px Barlow, sans-serif;
+			h4 {
+				text-transform: uppercase;
+				letter-spacing: 1.52px;
+				font-weight: 700;
+				text-align: center;
+				margin-top: 40px;
+			}
+			p {
+				letter-spacing: -0.19px;
+				margin: 10px 35px;
+			}
+			
+		}
+		&:hover .fon-blue {
+			display: block;
+		}
+	}
 }

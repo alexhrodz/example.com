@@ -18,24 +18,28 @@ Template Post Type: page
                 <div class="aup-section1">
                     <div class="aup-section1__wrapper">
                         <h3 class="h3"><?php the_sub_field('title_section'); ?></h3>
-                        <div class="gggg">
-                            <div class="gggg__2">
-                                <h3 class="h3"><?php the_sub_field('title'); ?></h3>
+                        <div class="flex">
+                            <div class="left-part">
+                                <h3 class=""><?php the_sub_field('title'); ?></h3>
                                 <p class="p"><?php the_sub_field('text_area'); ?></p>
                             </div>
-                            <div class="gggg__2">
-                                <?php
-                                    $link = get_sub_field('link');
-                                    if ($link):
-                                        $link_url = $link['url'];
-                                        $link_title = $link['title'];
-                                        $link_target = $link['target'] ? $link['target'] : '_self';
-                                        ?>
-                                        <a class="blue-buton" href="<?php echo esc_url($link_url); ?>"
-                                           target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
-                                    <?php endif; 
+                            <div class="right-part">
+                                <div class="btn-wrapper">
+                                    
+                                    <?php
+                                        $link = get_sub_field('link');
+                                        if ($link):
+                                            $link_url = $link['url'];
+                                            $link_title = $link['title'];
+                                            $link_target = $link['target'] ? $link['target'] : '_self';
+                                            ?>
+                                            <a class="blue-buton" href="<?php echo esc_url($link_url); ?>"
+                                               target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                                        <?php endif; ?>
+                                </div>
                                 
-                                    $image = get_sub_field('image');
+                                
+                                    <?php $image = get_sub_field('image');
                                     if( !empty($image) ): ?>
 
                                         <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
@@ -63,12 +67,8 @@ Template Post Type: page
                             <h3 class="h3"><?php the_sub_field('title'); ?></h3>
                             <p class="p"><?php the_sub_field('text'); ?></p>
                         </div>
-                        
-
                     </div>
-                    
                 </div>
-                
             <?php // layout_3
                 elseif ($layout === 'section3'): ?>
                     <div class="aup-section3">
