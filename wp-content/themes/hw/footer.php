@@ -31,6 +31,21 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+    <script>
+$(function() {
+  // Owl Carousel
+  var owl = $(".owl-carousel");
+  owl.owlCarousel({
+    items: 1,
+    margin: 400,
+    loop: true,
+    nav: true,
+    autoplay: true,
+    navText : ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"]
+  });
+});
 
+    </script>
+<script src="http://example.com/wp-content/themes/hw/node_modules/owl.carousel2/dist/owl.carousel.min.js"></script>
 </body>
 </html>

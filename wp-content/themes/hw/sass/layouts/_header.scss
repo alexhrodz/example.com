@@ -1,0 +1,48 @@
+.header {
+	max-width: 1280px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	position: relative;
+	padding: 20px 0 10px;
+	.flex, .menu {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.user {
+		position: absolute;
+		top: 0;
+		right: 0;
+		a {
+			color: #00a4e4;
+			font-family: "Barlow - Semi Bold";
+			font-size: 13px;
+			font-weight: 700;
+			line-height: 24px;
+			letter-spacing: 0.26px;
+			padding: 4px 8px;
+		}
+		.active a, a:hover {
+				color: #fff;
+				background-color: #00a4e4;
+		}
+	}
+	.menu {
+		a {
+			color: #666666;
+			font-family: "Barlow - Semi Bold";
+			font-size: 15px;
+			font-weight: 500;
+			line-height: 24px;
+			letter-spacing: 0.3px;
+			margin-left: 20px;
+			&:hover {
+				color: #00a4e4;
+			}
+		}
+	}
+}

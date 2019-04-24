@@ -4,7 +4,8 @@ Template Name: Home Page
 Template Post Type: page
 */
 ?>
-
+<script src="/node_modules/jquery/dist/jquery.js"></script>
+<script src="/node_modules/owl.carousel2/dist/owl.carousel.min.js"></script>
 <?php get_header(); ?>
 <div class="main-container">
 
@@ -104,65 +105,32 @@ Template Post Type: page
                     <div class="hp-section5">
                         <div class="hp-section5__wrapper">
                             <h3 class="h3"><?php the_sub_field('title_section'); ?></h3>
-                            <div class="owl-carousel owl-loaded owl-drag">
-                                <div class="owl-stage-outer">
-                                    <div class="owl-stage">
-                                        <div class="owl-item cloned">
-                                            <div class="item slide-1">
-                                                <?php if( have_rows('slider') ): ?>
-                                                    <?php while( have_rows('slider') ): the_row(); 
-                                                        // vars
-                                                        $image = get_sub_field('image');
-                                                        $text = get_sub_field('text');
-                                                        $title = get_sub_field('title');
-                                                    ?>
-                                                <div class="image">
-                                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
-                                                </div>
-                                                <div class="title">
-                                                    <h4 class=""><?php echo $title; ?></h4>
-                                                </div>
-                                                <div class="subtitle p"><?php echo $text; ?></div>
-                                                <?php endwhile; ?>
-                                                <?php endif; ?>
-                                            </div>
-                                        </div>
-                                        <div class="owl-nav">
-                                            <button type="button" role="presentation" class="owl-prev">
-                                                <i class="fas fa-chevron-left"></i>
-                                            </button>
-                                            <button type="button" role="presentation" class="owl-next">
-                                                <i class="fas fa-chevron-right"></i>
-                                            </button>
-                                        </div>
-                                        <div class="owl-dots">
-                                            <button role="button" class="owl-dot">
-                                                <span></span>
-                                            </button>
-                                            <button role="button" class="owl-dot">
-                                                <span></span>
-                                            </button>
-                                            <button role="button" class="owl-dot">
-                                                <span></span>
-                                            </button>
-                                            <button role="button" class="owl-dot">
-                                                <span></span>
-                                            </button>
-                                            <button role="button" class="owl-dot">
-                                                <span></span>
-                                            </button>
-                                            <button role="button" class="owl-dot">
-                                                <span></span>
-                                            </button>
-                                            <button role="button" class="owl-dot">
-                                                <span></span>
-                                            </button>
-                                        </div>
+                           
+                             
+                              <div class="owl-carousel owl-theme">
+                                 <?php if( have_rows('slider') ): ?>
+                                    <?php while( have_rows('slider') ): the_row(); 
+                                        // vars
+                                        $image = get_sub_field('image');
+                                        $text = get_sub_field('text');
+                                        $title = get_sub_field('title');
+                                    ?>
+                                <div class="item">
+                                    <div class="image">
+                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
                                     </div>
-    
+                                    <div class="title">
+                                        <h4 class=""><?php echo $title; ?></h4>
+                                    </div>
+                                    <div class="subtitle p"><?php echo $text; ?></div>
+                                </div>
+                                <?php endwhile; ?>
+                                <?php endif; ?>
+                            </div>
+                            
                         </div>
-                    </div></div>
-                </div>
+
+                    </div>
                 <?php // layout_6
                 elseif ($layout === 'section6'): ?>
                     <div class="hp-section6">
