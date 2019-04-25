@@ -13,39 +13,51 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'alexh' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'alexh' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'alexh' ), 'alexh', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer class="footer">
+		<div  class="footer__wrapper">
+		    <div class="learn">
+				<h3>Learn</h3>
+         			<?php the_field('footer_nav_1', 'option'); ?>
+         	</div>
+         	<div class="connect">
+         		<h3>Connect</h3>
+         		<?php the_field('footer_nav_2', 'option'); ?>
+         	</div>
+		    <div class="join">
+		      <h3>Join</h3>
+		      <form action="">
+		        <div class="email">
+		          <label for="email">
+		            <input id="email" type="email" placeholder="Join our email list and get tips. learn about Webinars and more!">
+		            <button class="btn blue-buton">Join Us!</button>
+		          </label>
+		        </div>
+		        <div class="agree">
+		          <input type="checkbox" id="agree">
+		          <label for="agree">By joining the email list you agree to the LifeLens <a href="#">Privacy Policy</a></label>
+		        </div>
+		       </form>
+		      <div>
+		        <ul class="social-icon">
+		          <li><a href="https://www.facebook.com/" title="Facebook"><i class="fab fa-facebook"></i></a></li>
+		          <li><a href="https://vimeo.com/" title="Vimeo"><i class="fab fa-vimeo"></i></a></li>
+		          <li><a href="https://www.linkedin.com/f" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+		          <li><a href="https://twitter.com/" title="Twitter"><i class="fab fa-twitter-square"></i></a></li>
+		        </ul>
+		      </div>
+		    </div> </div>
+		    <div class="footer-line">
+		    	<?php the_field('footer_bottom_line', 'option'); ?>
+		    </div>
+
+</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-    <script>
-$(function() {
-  // Owl Carousel
-  var owl = $(".owl-carousel");
-  owl.owlCarousel({
-    items: 1,
-    margin: 400,
-    loop: true,
-    nav: true,
-    autoplay: true,
-    navText : ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"]
-  });
-});
+<script src="http://example.com/wp-content/themes/hw/source-js/main.js"></script>
 
-    </script>
+
+
 <script src="http://example.com/wp-content/themes/hw/node_modules/owl.carousel2/dist/owl.carousel.min.js"></script>
 </body>
 </html>

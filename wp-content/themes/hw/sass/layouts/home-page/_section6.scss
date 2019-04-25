@@ -1,10 +1,10 @@
 .hp-section6 {
-		max-width: 1050px;
-		margin: 0 auto;
-		text-align: center;
-		padding: 40px 0;
+	max-width: 1050px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 40px 0;
 	&__description {
-		p {
+		.p {
 			display: block;
 			margin: 0 auto;
 			max-width: 800px;
@@ -14,56 +14,66 @@
 	.flex {
 		display: flex;
 		justify-content: space-between;
-		.nav-left, .nav-rigth {
-			max-width: 18%;
-			margin-top: 70px;
+	}
+}
+
+ /* Style the tab */
+.tab-left, .tab-rigth {
+	overflow: hidden;
+	max-width: 18%;
+	margin-top: 70px;
+	.active {
+		border: 1px solid #00a4e4;
+		background-color: #00a4e4;
+		color: #fff;
+	}
+	button {
+		cursor: pointer;
+	}
+}
+.tabcontent {
+	display: none;
+}
+
+.tabb {
+	margin-bottom: 30px;
+	display: inline-block;
+	&-descript-wrapp {
+		width: 592px;
+		height: 199px;
+		margin: 0 auto;
+		background-color: #f2f2f2;
+		border: 1px solid #e2e2e2;
+		h4 {
+			background-color: #e2e2e2;
+			padding: 15px 0;
 		}
-		.tab {
-			max-width: 63%;
-			margin-bottom: 30px;
-			&-descript-wrapp {
-				width: 592px;
-				height: 199px;
-				margin: 0 auto;
-				background-color: #f2f2f2;
-				border: 1px solid #e2e2e2;
-				h4 {
-					background-color: #e2e2e2;
-					display: none;
-					padding: 15px 0;
-				}
-				p {
-					line-height: 22px;
-					display: none;
-					padding: 15px 20px;
-
-				}
-				.active {
-						display: block;
-					}
-			}
-			&-image-wrapp {
-				width: 672px;
-				height: 388px;
-				overflow: hidden;
-				background: url("../img/computer_image.png") no-repeat center;
-				.tab-images {
-					position: relative;
-					max-width: 510px;
-					max-height: 320px;
-
-					.tab-image {
-						position: absolute;
-						top: 25px;
-						left: 81px;
-						width: 100%;
-						z-index: -1;
-					}
-				}
-				margin-bottom: 30px;
-			}
-			
+		p {
+			line-height: 22px;
+			padding: 15px 20px;
 		}
 
+	}
+	&-image-wrapp {
+		width: 672px;
+		height: 388px;
+		overflow: hidden;
+		background: url("../img/computer_image.png") no-repeat center;
+		margin-bottom: 30px;
+		.tab-images {
+			position: relative;
+			max-width: 510px;
+			max-height: 320px;
+			.tab-image {
+				position: absolute;
+				top: 25px;
+				left: 81px;
+				width: 100%;
+				z-index: -1;
+	
+			}
+		
+		}
+	
 	}
 }

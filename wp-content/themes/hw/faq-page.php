@@ -34,7 +34,7 @@ Template Post Type: page
 
                         ?>
 
-                        <li class="faq-active">
+                        <li class="faq-element">
 
                             
                             <div class="question-wrapper">

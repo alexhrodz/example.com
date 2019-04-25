@@ -133,71 +133,119 @@ Template Post Type: page
                     </div>
                 <?php // layout_6
                 elseif ($layout === 'section6'): ?>
-                    <div class="hp-section6">
-                        <div class="hp-section6__description">
+
+                        <div class="hp-section6">
+                         <div class="hp-section6__description">
                             <h3 class="h3"><?php the_sub_field('title_section'); ?></h3>
                             <p class="p"><?php the_sub_field('text_section'); ?></p>
                         </div>
                         <div class="flex">
-                            <div class="nav-left">
-                                <ul>
-                                    <li class="white-buton"><h4><?php the_sub_field('title_1'); ?></h4></li>
-                                    <li class="white-buton"><h4><?php the_sub_field('title_2'); ?></h4></li>
-                                </ul>
-                            </div>
-                            
-                            <div class="tab">
-                                <div class="tab-image-wrapp">
+                        <div class="tab-left">
+                          <button class="tablinks white-buton active" onclick="openCity(event, 'tab1')">
+                              <?php the_sub_field('title_1'); ?>
+                          </button>
+                          <button class="tablinks white-buton" onclick="openCity(event, 'tab2')">
+                              <?php the_sub_field('title_2'); ?>
+                          </button>
+                          
+                        </div>
+
+                        <!-- Tab content -->
+                        <div id="tab1" class="tabcontent" style="display: block;">
+                            <div class="tabb">
+                                <div class="tabb-image-wrapp">
                                     <div class="tab-images">
                                         <?php
                                         $image_1 = get_sub_field('image_1');
-                                        $image_2 = get_sub_field('image_2');
-                                        $image_3 = get_sub_field('image_3');
-                                        $image_4 = get_sub_field('image_4');
+                                      
                                         if( !empty($image_1) ): ?>
-                                            <img class="tab-image" src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>" />
-                                        <?php endif; 
-                                        if( !empty($image_2) ): ?>
-                                            <img class="tab-image"" src="<?php echo $image_2['url']; ?>" alt="<?php echo $image_2['alt']; ?>" />
-                                        <?php endif; 
-                                        if( !empty($image_3) ): ?>
-                                            <img class="tab-image"" src="<?php echo $image_3['url']; ?>" alt="<?php echo $image_3['alt']; ?>" />
-                                        <?php endif; 
-                                        if( !empty($image_4) ): ?>
-                                            <img class="tab-image"" src="<?php echo $image_4['url']; ?>" alt="<?php echo $image_4['alt']; ?>" />
-                                        <?php endif; ?>
+                                            <img class="tab-image active" src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>" />
+                                        <?php endif;  ?>
+                                    </div>
+
+                                </div>
+                                    <div class="tabb-descript-wrapp">
+                                        <h4 class="active"><?php the_sub_field('title_1'); ?></h4>
+                                        <p class="p active"><?php the_sub_field('text_1'); ?></p>
+                                    </div>                                
+                            </div>
+                        </div>
+
+                        <div id="tab2" class="tabcontent">
+                            <div class="tabb">
+                                <div class="tabb-image-wrapp">
+                                    <div class="tab-images">
+                                        <?php
+                                        $image_2 = get_sub_field('image_2');
+                                      
+                                        if( !empty($image_1) ): ?>
+                                            <img class="tab-image" src="<?php echo $image_2['url']; ?>" alt="<?php echo $image_2['alt']; ?>" />
+                                        <?php endif;  ?>
+                                    </div>
+
+                                </div>
+                                    <div class="tabb-descript-wrapp">
+                                        <h4 class=""><?php the_sub_field('title_2'); ?></h4>
+                                        <p class="p"><?php the_sub_field('text_2'); ?></p>
+                                    </div>                                
+                            </div>
+                        </div>
+
+                        <div id="tab3" class="tabcontent">
+                            <div class="tabb">
+                                <div class="tabb-image-wrapp">
+                                    <div class="tab-images">
+                                        <?php
+                                        $image_3 = get_sub_field('image_3');
+                                      
+                                        if( !empty($image_1) ): ?>
+                                            <img class="tab-image" src="<?php echo $image_3['url']; ?>" alt="<?php echo $image_3['alt']; ?>" />
+                                        <?php endif;  ?>
+                                    </div>
+
+                                </div>
+                                    <div class="tabb-descript-wrapp">
+                                        <h4 class=""><?php the_sub_field('title_3'); ?></h4>
+                                        <p class="p"><?php the_sub_field('text_3'); ?></p>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div id="tab4" class="tabcontent">
+                            <div class="tabb">
+                                <div class="tabb-image-wrapp">
+                                    <div class="tab-images">
+                                        <?php
+                                        $image_4 = get_sub_field('image_4');
+                                      
+                                        if( !empty($image_1) ): ?>
+                                            <img class="tab-image" src="<?php echo $image_4['url']; ?>" alt="<?php echo $image_4['alt']; ?>" />
+                                        <?php endif;  ?>
                                     </div>
                                 </div>
-                                <div class="tab-descript-wrapp">
-                                    <h4 class="active"><?php the_sub_field('title_1'); ?></h4>
-                                    <h4><?php the_sub_field('title_2'); ?></h4>
-                                    <h4><?php the_sub_field('title_3'); ?></h4>
-                                    <h4><?php the_sub_field('title_4'); ?></h4>
-                                    <p class="p active"><?php the_sub_field('text_1'); ?></p>
-                                    <p class="p"><?php the_sub_field('text_2'); ?></p>
-                                    <p class="p"><?php the_sub_field('text_3'); ?></p>
-                                    <p class="p"><?php the_sub_field('text_4'); ?></p>
-                                </div>
-                            </div>
+                                    <div class="tabb-descript-wrapp">
+                                        <h4 class=""><?php the_sub_field('title_4'); ?></h4>
+                                        <p class="p"><?php the_sub_field('text_4'); ?></p>
+                                    </div>
 
-                            <div class="nav-rigth">
-                                <ul>
-                                    <li class="white-buton active-nav"><h4><?php the_sub_field('title_3'); ?></h4></li>
-                                    <li class="white-buton"><h4><?php the_sub_field('title_4'); ?></h4></li>
-                                </ul>
-                            </div></div>
-                            <?php
-                                $link = get_sub_field('link');
-                                if ($link):
-                                    $link_url = $link['url'];
-                                    $link_title = $link['title'];
-                                    $link_target = $link['target'] ? $link['target'] : '_self';
-                                    ?>
-                                    <a class="blue-buton" href="<?php echo esc_url($link_url); ?>"
-                                       target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
-                            <?php endif; ?>
+                            </div>
+                        </div>
+
+                     
+
+                        <div class="tab-rigth">
                         
+                          <button class="tablinks white-buton" onclick="openCity(event, 'tab3')">
+                              <?php the_sub_field('title_3'); ?>
+                          </button>
+                          <button class="tablinks white-buton" onclick="openCity(event, 'tab4')">
+                              <?php the_sub_field('title_4'); ?>
+                          </button>
+                        </div>
                     </div>
+
+                    </div>
+
                 <?php // layout_7
                 elseif ($layout === 'section7'): ?>
                     <div class="hp-section7">

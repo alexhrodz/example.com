@@ -39,8 +39,14 @@
 			}
 			
 		}
-		&:hover .fon-blue {
-			display: block;
+		
+		&:hover {
+			.fon-blue {
+				display: block;
+			}
+			 img {
+				filter: grayscale(100%);
+			}
 		}
 	}
 }
